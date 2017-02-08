@@ -1,0 +1,5 @@
+check process timer
+  with pidfile /var/vcap/sys/run/timer/timer.pid
+  start program "/var/vcap/jobs/timer/bin/monit_debugger timer_ctl '/var/vcap/jobs/timer/bin/ctl start'"
+  stop program "/var/vcap/jobs/timer/bin/monit_debugger timer_ctl '/var/vcap/jobs/timer/bin/ctl stop'"
+  group vcap
